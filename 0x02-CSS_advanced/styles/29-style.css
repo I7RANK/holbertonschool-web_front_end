@@ -136,14 +136,14 @@ a:active {
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--color-white);
+    background-color: var(--color-white);
     width: 0;
     height: 0.2rem;
 }
 
 .nav .nav-item:hover .nav-link::before {
-    background: var(--color-primary);
-    width: 1em;
+    background-color: var(--color-primary);
+    width: 100%;
 }
 
 /* Grid styling and custom variables */
