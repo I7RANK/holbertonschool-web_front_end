@@ -1,0 +1,12 @@
+/* Nested class */
+
+$text-color0: #3D3D3D;
+$text-color1: #FF0000;
+
+body {
+    color: $text-color0;
+
+    .red {
+        color: $text-color1;
+    }
+}

@@ -1,0 +1,25 @@
+/* Using Extended */
+
+%font-size {
+    font-size: 12px;
+}
+
+%text-color-green {
+    color: #00FF00;
+}
+
+%text-color-red {
+    color: #FF0000;
+}
+
+.info, .success, .warning {
+    @extend %font-size;
+}
+
+.success {
+    @extend %text-color-green;
+}
+
+.warning {
+    @extend %text-color-red;
+}

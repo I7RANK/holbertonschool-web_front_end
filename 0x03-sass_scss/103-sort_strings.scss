@@ -1,0 +1,51 @@
+/* Sorting a list */
+
+@import '103-sort_list';
+
+$default-order:
+    "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
+    "a" "b" "c" "d" "e" "f" "g" "h" "i" "j"
+    "k" "l" "m" "n" "o" "p" "q" "r" "s" "t"
+    "u" "v" "w" "x" "y" "z";
+
+$last_work: "";
+$last_num: 0;
+$control: true;
+$cambio: false;
+
+@while $control {
+    $cambio: false;
+
+    @each $work in $list_to_sort {
+        $first-letter: str-slice($work, 0, 1);
+
+        $num: index($default-order, $first-letter);
+
+        @if $last_num > 0 {
+            @if $num < $last_num {
+                $control: true;
+
+                $index: index($list_to_sort, $last_work);
+
+                $list_to_sort: set-nth($list_to_sort, $index, $work);
+                $list_to_sort: set-nth($list_to_sort, $index + 1, $last_work);
+
+                $cambio: true;
+            } @else {
+                $last_num: $num;
+                $last_work: $work;
+            }
+        } @else {
+            $last_num: $num;
+            $last_work: $work;
+        }
+    }
+    $last_work: "";
+    $last_num: 0;
+
+    @if $cambio == false {
+        $control: false;
+    }
+}
+
+@debug $list_to_sort;

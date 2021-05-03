@@ -1,0 +1,9 @@
+/* creating colums with for */
+
+$percent: 100%;
+
+@for $i from 1 to 5 {
+    .col-#{$i} {
+        width: $percent / $i;
+    }
+}
