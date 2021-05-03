@@ -1,27 +1,15 @@
 /* Using Extended */
 
-%font-size {
+.info {
     font-size: 12px;
 }
 
-%text-color-green {
-    color: #00FF00;
-}
-
-%text-color-red {
-    color: #FF0000;
-}
-
-.info {
-    @extend %font-size;
-}
-
 .success {
-    @extend %text-color-green;
+    color: #00FF00;
     @extend .info;
 }
 
 .warning {
-    @extend %text-color-red;
+    color: #FF0000;
     @extend .info;
 }
