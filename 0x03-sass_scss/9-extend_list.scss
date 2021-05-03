@@ -12,14 +12,16 @@
     color: #FF0000;
 }
 
-.info, .success, .warning {
+.info {
     @extend %font-size;
 }
 
 .success {
     @extend %text-color-green;
+    @extend .info;
 }
 
 .warning {
     @extend %text-color-red;
+    @extend .info;
 }
