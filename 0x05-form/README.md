@@ -12,4 +12,4 @@
 - How to create usable and accessible forms
 
 ## Form made in the project
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/2/147954ddba159a99d0b2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210508%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210508T194205Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=b52fac2f21439ba7f7145608f75b9edc09713416b7dd52000146f260ffc20dcc)
+<img width="792" alt="147954ddba159a99d0b2" src="https://user-images.githubusercontent.com/65993425/117551540-30d08480-b00c-11eb-9284-15ec1ce02719.png">
