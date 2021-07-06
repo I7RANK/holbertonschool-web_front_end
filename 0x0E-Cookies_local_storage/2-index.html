@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Login to the website</h1>
+    <input id="firstname" type="text">
+    <input id="email" type="email">
+    <button onclick="setCookies();">Log me in</button>
+
+    <h2>Cookies</h2>
+    <button onclick="showCookies();">Show the cookies</button>
+
+    <script>
+        function setCookies() {
+            const firsname = document.querySelector("#firstname").value;
+            const email = document.querySelector("#email").value;
+            const date = new Date(Date.now());
+            let utcDate;
+
+            // adds 10 days to current date
+            date.setDate(date.getDate() + 10)
+            utcDate = date.toUTCString();
+
+            document.cookie = `firstname=${firsname}; expires=${utcDate}`;
+            document.cookie = `email=${email}; expires=${utcDate}`;
+        }
+
+        function showCookies() {
+            const p = document.createElement("p");
+
+            let cookieData = getCookie(document.querySelector("#firstname").value);
+
+            if (cookieData != "") {
+                cookieData = cookieData.split(";");
+
+                p.innerHTML = `Email: ${cookieData[1].split("=")[1]}\
+                         - Firstname: ${cookieData[0].split("=")[1]}`;
+            } else {
+                p.innerHTML = "Email:  - Firstname: ";
+            }
+
+            document.body.appendChild(p);
+        }
+
+        function getCookie(name) {
+            if (document.cookie.includes(name)) {
+                console.log("TRUE");
+                return document.cookie;
+            } else {
+                console.log("FALSE");
+                return "";
+            }
+        }
+    </script>
+</body>
+
+</html>
